@@ -1,0 +1,110 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f4f8;
+}
+
+.game-container {
+  max-width: 600px;
+  text-align: center;
+}
+
+.tiles {
+  display: flex;              /* Align tiles in a row */
+  flex-wrap: wrap;           /* Allow wrapping to new lines */
+  justify-content: center;    /* Center the tiles */
+  margin: 20px 0;            /* Space around the tiles */
+}
+
+.tile {
+  width: 60px;               /* Fixed width for each tile */
+  height: 100px;             /* Fixed height for each tile */
+  background-color: #333;    /* Dark background for domino */
+  color: white;               /* White text for contrast */
+  border-radius: 10px;       /* Rounded corners */
+  display: flex;             /* Flexbox for centering content */
+  flex-direction: column;    /* Stack items vertically */
+  align-items: center;       /* Center items horizontally */
+  justify-content: center;    /* Center items vertically */
+  margin: 10px;              /* Space between tiles */
+  transition: transform 0.1s ease; /* Smooth transition for the animation */
+  cursor: pointer;           /* Change cursor to pointer on hover */
+}
+
+.tile.clicked {
+    transform: scale(1.1); /* Scale up the tile when clicked */
+}
+
+.selected {
+  background-color: #fff;
+  /* color: #fff; */
+}
+
+.results {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.string-box {
+  border: 2px solid #333;   /* Border color */
+  padding: 10px;            /* Padding inside the box */
+  margin-top: 10px;         /* Space between boxes */
+  display: block;           /* Stack boxes vertically */
+  width: 100%;              /* Make the box take full width */
+  word-wrap: break-word;    /* Handle long strings */
+  background-color: #f9f9f9; /* Background color */
+}
+
+.matched {
+    color: green;  /* Change the color of matched letters */
+    font-weight: bold; /* Make matched letters bold */
+}
+
+.mismatched {
+    color: red; /* Change the color of mismatched letters */
+    font-weight: bold; /* Make mismatched letters bold */
+}
